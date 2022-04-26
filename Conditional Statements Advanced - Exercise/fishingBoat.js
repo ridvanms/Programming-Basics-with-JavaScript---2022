@@ -28,7 +28,7 @@ function fishingBoat(input) {
 
   // bonus discount
   if (fishermenCount % 2 === 0 && season !== "Autumn") {
-    rentPrice -= 0.05 * rentPrice;
+    discountPrice += (rentPrice - discountPrice) * 0.05;
   }
 
   //calculating the total price
@@ -43,4 +43,4 @@ function fishingBoat(input) {
     );
   }
 }
-fishingBoat(["3000", "Summer", "11"]);
+fishingBoat(["3000", "Summer", "12"]);
