@@ -30,22 +30,24 @@ function onTimeForExam(input) {
       hh = difference / 60;
       mm = difference % 60;
       console.log(
-        `Early\n${hh.toFixed(0)}:${
+        `Early\n${Math.floor(hh)}:${
           mm < 10 ? `0${mm}` : mm
         } hours before the start`
       );
     }
   } else if (totalExamMinutes < totalArrivedMinutes) {
-    if (difference > 0 && difference <= 30) {
-      console.log(`late ${difference} minutes after the start`);
-    } else if (difference > 30 && difference < 60) {
+    if (difference < 60) {
       mm = difference;
       hh = difference;
       console.log(`Late\n${mm} minutes after the start`);
     } else if (difference >= 60) {
       hh = difference / 60;
       mm = difference % 60;
-      console.log(`Late\n${Math.floor(hh)}:${mm} hours after the start`);
+      console.log(
+        `Late\n${Math.floor(hh)}:${
+          mm < 10 ? `0${mm}` : mm
+        } hours after the start`
+      );
     }
   }
 }
