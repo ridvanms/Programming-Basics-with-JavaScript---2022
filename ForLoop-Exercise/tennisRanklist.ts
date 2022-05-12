@@ -28,6 +28,6 @@ function ranklist(input){
     let percentageOfWins = winsCount / tournamentsCount * 100;
     
     console.log(`Final points: ${finalPoints}`)
-    console.log(`Average points: ${Math.round(averagePoints)}`)
+    console.log(`Average points: ${Math.ceil(averagePoints)}`)
     console.log(`${percentageOfWins.toFixed(2)}%`)
 }
