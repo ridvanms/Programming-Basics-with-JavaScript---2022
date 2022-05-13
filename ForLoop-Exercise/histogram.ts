@@ -1,24 +1,35 @@
 function histogram(input){
-    
-    let pArr = [0,0,0,0,0];
-    for(let i=1;i<+input[0]+1;i++){
-        if(+input[i] >= 800){
-            pArr[4] +=1;
-        }else if(+input[i] > 599 && +input[i] < 800){
-            pArr[3] +=1;
-        }else if(+input[i] >399 && +input[i] < 600){
-            pArr[2] +=1;
-        }else if(+input[i] >199 && +input[i] < 400){
-            pArr[1] += 1;
-        }else if(+input[i] <200){
-            pArr[0] += 1;
+    let numbersCount = +input[0];
+    let p1 = 0;
+    let p2 = 0;
+    let p3 = 0;
+    let p4 = 0;
+    let p5 = 0;
+
+    for (let i = numbersCount;i!==0;i--){
+        if(+input[i]>= 800){
+            p5 += 1;
+        }else if(+input[i]>= 600){
+            p4 += 1;
+        }else if(+input[i]>=400){
+            p3 += 1;
+        }else if(+input[i]>=200){
+            p2 += 1;
+        }else{
+            p1 += 1;
         }
     }
-    console.log(pArr);
-    pArr.forEach(p=>{
-        p = p / 20 * 100;
-        console.log(`${p.toFixed(2)}%`)
-    })
+    p1 = p1 / numbersCount * 100;
+    p2 = p2 / numbersCount * 100;
+    p3 = p3 / numbersCount * 100;
+    p4 = p4 / numbersCount * 100;
+    p5 = p5 / numbersCount * 100;
+
+    console.log(`${p1.toFixed(2)}%`)
+    console.log(`${p2.toFixed(2)}%`)
+    console.log(`${p3.toFixed(2)}%`)
+    console.log(`${p4.toFixed(2)}%`)
+    console.log(`${p5.toFixed(2)}%`)
+
 }
 histogram(["7","800","801","250","199","399","599","799"])
-// console.log((12/20*100).toFixed(2)+'%')
