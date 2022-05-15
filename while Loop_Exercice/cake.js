@@ -7,17 +7,16 @@ function cake(input) {
 
     let totalPieces = length * width;
     let noMore = false;
-    while (input[index] !== "Stop") {
+    while (input[index] !== "STOP") {
         totalPieces -= +input[index];
-        if (totalPieces <= +input[index]) {
+        if (totalPieces < 0) {
             noMore = true;
             break;
         }
         index++;
     }
     if (noMore) {
-        totalPieces = Math.abs(totalPieces)
-        console.log(`No more cake left! You need ${totalPieces} pieces more.`);
+        console.log(`No more cake left! You need ${Math.abs(totalPieces)} pieces more.`);
     } else {
         console.log(`${totalPieces} pieces are left.`)
     }
