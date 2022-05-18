@@ -1,6 +1,8 @@
 function greater(input) {
-  let firstNum = Number(input[0]);
-  let secondNum = Number(input[1]);
+  let index = 0;
+  let firstNum = Number(input[index]);
+  index++;
+  let secondNum = Number(input[index]);
 
   let result = firstNum > secondNum ? `${firstNum}` : `${secondNum}`;
   console.log(result);
