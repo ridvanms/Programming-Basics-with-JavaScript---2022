@@ -6,18 +6,24 @@ function summing(input) {
     let combinations = 0;
     let first = 0;
     let second = 0;
+
+    let count = 0;
     for (let x1 = fNums; x1 <= sNums; x1++) {
         for (let x2 = fNums; x2 <= sNums; x2++) {
             if (x1 + x2 === magicNum) {
-                combinations++;
-                first = x1;
-                second = x2;
+                count++;
+                if (count === 1) {
+                    first = x1;
+                    second = x2;
+                }
             }
+
         }
     }
-    if (combinations === 0) {
-        console.log(``)
+    if (!first && !second) {
+        console.log(`${combinations} combinations - neither equals ${magicNum}`)
+    } else {
+        console.log(`Combination N:${combinations} ${first} + ${second} = ${magicNum}`)
     }
-    console.log(`Combination N:${combinations} ${second} + ${first} = ${magicNum}`)
 }
-summing(['1', '10', '5']);
+summing(['88', '888', '1000']);
