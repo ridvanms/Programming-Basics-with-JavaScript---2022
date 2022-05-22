@@ -10,6 +10,7 @@ function summing(input) {
     let count = 0;
     for (let x1 = fNums; x1 <= sNums; x1++) {
         for (let x2 = fNums; x2 <= sNums; x2++) {
+            combinations++;
             if (x1 + x2 === magicNum) {
                 count++;
                 if (count === 1) {
@@ -23,7 +24,7 @@ function summing(input) {
     if (!first && !second) {
         console.log(`${combinations} combinations - neither equals ${magicNum}`)
     } else {
-        console.log(`Combination N:${combinations} ${first} + ${second} = ${magicNum}`)
+        console.log(`Combination N:${combinations} (${first} + ${second} = ${magicNum})`)
     }
 }
 summing(['88', '888', '1000']);
