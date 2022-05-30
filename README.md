@@ -1,5 +1,4 @@
 # Programming-Basics-with-JavaScript---2022
 Starting in SoftUni
 ....
-![compleate](https://github.com/ridvanms/Programming-Basics-with-JavaScript---2022/blob/main/Programming%20Basics%20-%20April%202022%20-%20Certificate.pdf)
- 
+<img width="531" alt="JavaScript(Certigicate)" src="https://softuni.bg/certificates/details/133758/6738c83a">
