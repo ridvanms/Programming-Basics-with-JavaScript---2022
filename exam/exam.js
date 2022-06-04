@@ -10,16 +10,14 @@ function exam(input) {
     for (let i = 1; i <= countOfStudents; i++) {
         let rating = +input[i];
         sum += rating;
-        switch (rating) {
-            case (rating >= 5):
-                firstGroup++; break;
-            case (rating >= 4):
-                secondGroup++; break;
-            case (rating >= 3):
-                therdGroup++; break;
-            case (rating >= 2):
-                fourthGroup++;
-
+        if (rating >= 5) {
+            firstGroup++;
+        } else if (rating >= 4) {
+            secondGroup++;
+        } else if (rating >= 3) {
+            therdGroup++;
+        } else {
+            fourthGroup++;
         }
     }
     let average = sum / countOfStudents
